@@ -131,7 +131,7 @@
         <!--Movie Details-->
         <scene sceneID="A3q-w2-0T4">
             <objects>
-                <viewController storyboardIdentifier="MovieDetails" id="iNi-ax-xnU" customClass="MovieDetails" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetails" hidesBottomBarWhenPushed="YES" id="iNi-ax-xnU" customClass="MovieDetails" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLc-u2-2rm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-ad-JeT">
-                                <rect key="frame" x="0.0" y="564" width="393" height="205"/>
+                                <rect key="frame" x="0.0" y="564" width="393" height="254"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T9p-e8-5PK">
                                     <size key="itemSize" width="128" height="128"/>
