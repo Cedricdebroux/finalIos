@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CellMovieDetails" customModule="finalIos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="278"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="205" height="278"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-PJ-C2v">
+                        <rect key="frame" x="52.666666666666657" y="54" width="100" height="170"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="170" id="1PR-hk-CCG"/>
+                            <constraint firstAttribute="width" constant="100" id="gWQ-J4-bQq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre du film" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-jR-VnP">
+                        <rect key="frame" x="52.666666666666657" y="235.33333333333334" width="100" height="40.000000000000028"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="pJl-U2-Y5W"/>
+                            <constraint firstAttribute="width" constant="100" id="rXk-dp-TCI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="eCs-jR-VnP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5K7-gD-GY4"/>
+                <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="QN6-NM-pwT"/>
+                <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="esy-eU-ePo"/>
+                <constraint firstItem="eCs-jR-VnP" firstAttribute="top" secondItem="uDk-PJ-C2v" secondAttribute="bottom" constant="11.333333333333343" id="pjS-v7-cQT"/>
+            </constraints>
+            <size key="customSize" width="205" height="278"/>
+            <connections>
+                <outlet property="imageFilm" destination="uDk-PJ-C2v" id="uYg-Tx-y5f"/>
+                <outlet property="titleLabel" destination="eCs-jR-VnP" id="jvf-Ux-6o8"/>
+            </connections>
+            <point key="canvasLocation" x="20.76923076923077" y="81.042654028436019"/>
+        </collectionViewCell>
+    </objects>
+</document>
