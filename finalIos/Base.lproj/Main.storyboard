@@ -149,11 +149,11 @@
                                     <constraint firstAttribute="height" constant="150" id="yOx-yd-Nq5"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-Ae-F14">
-                                <rect key="frame" x="323" y="207" width="40" height="40"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-Ae-F14">
+                                <rect key="frame" x="310" y="207" width="53" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxM-Lx-f2q">
-                                        <rect key="frame" x="-5" y="-5" width="50" height="50"/>
+                                        <rect key="frame" x="1.6666666666666856" y="1.6666666666666572" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="IE6-Oq-rvj"/>
                                             <constraint firstAttribute="height" constant="50" id="MfY-Hb-GNw"/>
@@ -163,10 +163,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="8iI-Hy-c4c"/>
-                                    <constraint firstAttribute="height" constant="40" id="b0t-So-jRP"/>
+                                    <constraint firstAttribute="width" constant="53" id="8iI-Hy-c4c"/>
+                                    <constraint firstAttribute="height" constant="53" id="b0t-So-jRP"/>
                                     <constraint firstItem="mxM-Lx-f2q" firstAttribute="centerX" secondItem="q5b-Ae-F14" secondAttribute="centerX" id="eWC-7H-CWP"/>
                                     <constraint firstItem="mxM-Lx-f2q" firstAttribute="centerY" secondItem="q5b-Ae-F14" secondAttribute="centerY" id="ovE-x4-HN4"/>
                                 </constraints>

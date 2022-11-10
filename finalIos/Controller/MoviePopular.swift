@@ -28,6 +28,7 @@ class MoviePopular: UIViewController {
         popularMovie.setCollectionViewLayout(createLayout(), animated: true, completion: nil)
         popularMovie.refreshControl = UIRefreshControl()
         popularMovie.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
+        title = "Popular"
     }
     override func viewWillDisappear(_ animated: Bool) {
         movies = [Movie]()

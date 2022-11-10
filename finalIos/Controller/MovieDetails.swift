@@ -43,12 +43,13 @@ class MovieDetails: UIViewController {
         similarMovies.delegate = self
         similarMovies.register(UINib(nibName: CellMovieDetails.identifier, bundle: .main), forCellWithReuseIdentifier: CellMovieDetails.identifier)
         similarMovies.setCollectionViewLayout(createLayout(), animated: true, completion: nil)
-        circle = CircularProgressView(frame: circleBackground.frame, lineWidth: 3, rounded: true)
-        circle.progressColor = .green
-        circle.trackColor = .black
-        circle.frame.origin = CGPoint(x: 0, y: 0)
-        view.addSubview(circle)
+//        circle = CircularProgressView(frame: circleBackground.frame, lineWidth: 3, rounded: true)
+//        circle.progressColor = .green
+//        circle.trackColor = .black
+//        circle.frame.origin = CGPoint(x: 0, y: 0)
+//        view.addSubview(circle)
         setupValue()
+        circleBackground.layer.cornerRadius = circleBackground.frame.size.height/2
         
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -65,7 +66,7 @@ class MovieDetails: UIViewController {
         titleMovie.text = movie.title
         descriptionMovie.text = movie.overview
         voteAverage.text = String(format: "%.01f", movie.voteAverage)
-        circle.progress = Float(movie.voteAverage)/10
+//        circle.progress = Float(movie.voteAverage)/10
         if let posterPath = movie.posterPath, let url = URL(string:(baseUrl+posterPath)){
             posterImage.af.setImage(withURL: url)
         }
