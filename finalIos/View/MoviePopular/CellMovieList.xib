@@ -52,6 +52,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="285" height="318"/>
             <connections>
+                <outlet property="circleBackground" destination="Zce-9l-nJz" id="8ok-IU-ekP"/>
                 <outlet property="imageFilm" destination="8kg-Ge-KtE" id="U9Y-v3-xdC"/>
                 <outlet property="voteAverage" destination="Oc8-di-1V7" id="ixp-iA-BfW"/>
             </connections>

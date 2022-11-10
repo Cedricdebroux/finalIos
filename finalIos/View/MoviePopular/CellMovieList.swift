@@ -13,6 +13,7 @@ class CellMovieList: UICollectionViewCell {
     let baseUrl = Api.baseImageURL
     
 
+    @IBOutlet var circleBackground: UIView!
     
     @IBOutlet var imageFilm: UIImageView!
     
@@ -20,12 +21,14 @@ class CellMovieList: UICollectionViewCell {
     
     override class func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     
 
     
     func setupCell(model: Movie){
+        circleBackground.layer.cornerRadius = circleBackground.frame.size.height/2
         voteAverage.text = String(format: "%.01f", model.voteAverage)
         
         if let posterPath = model.posterPath, let urls = URL(string:(baseUrl+posterPath)){
