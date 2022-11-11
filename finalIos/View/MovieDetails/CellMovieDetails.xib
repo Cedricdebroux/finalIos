@@ -17,19 +17,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-PJ-C2v">
-                        <rect key="frame" x="40" y="45.666666666666657" width="125" height="187"/>
+                        <rect key="frame" x="42.666666666666657" y="10" width="120" height="200"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="187" id="1PR-hk-CCG"/>
-                            <constraint firstAttribute="width" constant="125" id="gWQ-J4-bQq"/>
+                            <constraint firstAttribute="height" constant="200" id="1PR-hk-CCG"/>
+                            <constraint firstAttribute="width" constant="120" id="gWQ-J4-bQq"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre du film" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-jR-VnP">
-                        <rect key="frame" x="52.666666666666657" y="235.66666666666666" width="100" height="39.999999999999972"/>
+                        <rect key="frame" x="52.666666666666657" y="213" width="100" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="pJl-U2-Y5W"/>
                             <constraint firstAttribute="width" constant="100" id="rXk-dp-TCI"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,9 +38,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="eCs-jR-VnP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5K7-gD-GY4"/>
-                <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="QN6-NM-pwT"/>
                 <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="esy-eU-ePo"/>
                 <constraint firstItem="eCs-jR-VnP" firstAttribute="top" secondItem="uDk-PJ-C2v" secondAttribute="bottom" constant="3" id="pjS-v7-cQT"/>
+                <constraint firstAttribute="top" secondItem="uDk-PJ-C2v" secondAttribute="top" constant="-10" id="xuO-J9-9be"/>
             </constraints>
             <size key="customSize" width="205" height="278"/>
             <connections>
