@@ -6,3 +6,5 @@ un écran de film populaire
 et un écran de détail d'un film sélectionné 
 
 swift 
+
+version final du projet sur la branche upgrade 
