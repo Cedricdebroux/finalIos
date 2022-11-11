@@ -11,7 +11,7 @@
         <!--Movie Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MovieSearch" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieSearch" id="BYZ-38-t0r" customClass="MovieSearch" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                     <connections>
                         <outlet property="search" destination="UHc-oF-fJa" id="qsj-Qf-UFj"/>
                         <outlet property="searchMovieCollection" destination="d3d-Lh-ahO" id="W6B-6x-ybe"/>
-                        <segue destination="iNi-ax-xnU" kind="show" id="qQF-QR-gT1"/>
+                        <segue destination="iNi-ax-xnU" kind="show" identifier="MovieSearch" id="qQF-QR-gT1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,7 +92,7 @@
         <!--Movie Popular-->
         <scene sceneID="klv-eO-vBc">
             <objects>
-                <viewController id="GRd-fF-mrw" customClass="MoviePopular" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviePopular" id="GRd-fF-mrw" customClass="MoviePopular" customModule="finalIos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVm-sO-Xeo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
                     <navigationItem key="navigationItem" id="Pxf-Jw-acG"/>
                     <connections>
                         <outlet property="popularMovie" destination="qps-e4-1Ob" id="yit-Bw-9lG"/>
-                        <segue destination="iNi-ax-xnU" kind="show" id="STy-S8-UNk"/>
+                        <segue destination="iNi-ax-xnU" kind="show" identifier="MoviePopular" id="STy-S8-UNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnF-bb-CoB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,9 +153,8 @@
                                 <rect key="frame" x="303" y="213" width="60" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxM-Lx-f2q">
-                                        <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                        <rect key="frame" x="14" y="5" width="32" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="IE6-Oq-rvj"/>
                                             <constraint firstAttribute="height" constant="50" id="MfY-Hb-GNw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -172,10 +171,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre du film" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-Nl-aIR">
-                                <rect key="frame" x="150" y="279" width="200" height="26.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Fsz-fE-68H"/>
-                                </constraints>
+                                <rect key="frame" x="150" y="279" width="233" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,10 +228,13 @@
                             <constraint firstItem="QQO-ad-JeT" firstAttribute="top" secondItem="OHk-XY-tXL" secondAttribute="bottom" id="Tb8-LS-78X"/>
                             <constraint firstItem="RQ1-y8-hMI" firstAttribute="leading" secondItem="Lsb-Kf-xcJ" secondAttribute="leading" constant="30" id="Wkw-JF-3Pt"/>
                             <constraint firstItem="5kh-8t-nbg" firstAttribute="leading" secondItem="Lsb-Kf-xcJ" secondAttribute="leading" constant="30" id="Wv4-2v-N7B"/>
+                            <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="CrG-Nl-aIR" secondAttribute="trailing" constant="10" id="XAC-di-psa"/>
                             <constraint firstItem="HvL-F8-Y5M" firstAttribute="leading" secondItem="Lsb-Kf-xcJ" secondAttribute="leading" id="hv1-CR-ksH"/>
+                            <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="gIj-dk-VP2" secondAttribute="trailing" constant="291" id="nrS-4R-DcR"/>
                             <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="q5b-Ae-F14" secondAttribute="trailing" constant="30" id="otJ-xM-xy7"/>
                             <constraint firstItem="HvL-F8-Y5M" firstAttribute="centerX" secondItem="qLc-u2-2rm" secondAttribute="centerX" id="qSA-kp-hIm"/>
                             <constraint firstItem="5kh-8t-nbg" firstAttribute="top" secondItem="gIj-dk-VP2" secondAttribute="bottom" id="rcJ-Ul-8Za"/>
+                            <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OHk-XY-tXL" secondAttribute="trailing" symbolic="YES" id="t4x-p2-SAu"/>
                             <constraint firstItem="OHk-XY-tXL" firstAttribute="leading" secondItem="gIj-dk-VP2" secondAttribute="leading" id="wLi-1B-1oV"/>
                             <constraint firstItem="gIj-dk-VP2" firstAttribute="top" secondItem="RQ1-y8-hMI" secondAttribute="bottom" constant="20" id="wTL-Yt-qip"/>
                         </constraints>
@@ -299,7 +298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qQF-QR-gT1"/>
+        <segue reference="STy-S8-UNk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
