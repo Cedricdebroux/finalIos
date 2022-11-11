@@ -60,13 +60,13 @@ class Api {
     
     func urlSearchMovies(search: String) -> URL?{
         urlComponents.path = "/3/search/movie"
+//        search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         filterQuery()
         urlComponents.queryItems?.append(URLQueryItem(name: "query", value: "\(search)"))
         return urlComponents.url
     }
     
     func urlSimilar(movie: Int) -> URL?{
-//        filterQuery()
         urlComponents.path = "/3/movie/\(movie)/similar"
         return urlComponents.url
     }

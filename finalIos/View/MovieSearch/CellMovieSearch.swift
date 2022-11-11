@@ -18,11 +18,11 @@ class CellMovieSearch: UICollectionViewCell {
     }
     
     func setupCellSearch(model: Movie){
-        let dateRelease = model.releaseDate
+        guard let dateRelease = model.releaseDate else { return }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: dateRelease!)
-        dateFormatter.dateStyle = .medium
+        let date = dateFormatter.date(from: dateRelease)
+        dateFormatter.dateStyle = .long
         dateFormatter.locale = Locale(identifier: "EN-en")
 
         

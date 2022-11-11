@@ -75,7 +75,7 @@ class MoviePopular: UIViewController {
             
             item.contentInsets = Constants.spacingInsets
             
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1/2))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.30))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
             
             let section = NSCollectionLayoutSection(group: group)

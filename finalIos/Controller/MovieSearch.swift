@@ -29,6 +29,13 @@ class MovieSearch: UIViewController{
         searchMovieCollection.register(UINib(nibName: CellMovieSearch.identifier, bundle: nil), forCellWithReuseIdentifier: CellMovieSearch.identifier)
         searchMovieCollection.setCollectionViewLayout(createLayout(), animated: true)
         self.hideKeyboardWhenTappedAround()
+        let imageBackground : UIImageView = {
+            let iv = UIImageView()
+            iv.image = UIImage(named:"Cinema")
+            iv.contentMode = .scaleAspectFill
+            return iv
+        }()
+        self.searchMovieCollection?.backgroundView = imageBackground
     }
     override func viewWillAppear(_ animated: Bool) {
         api = Api()
@@ -54,8 +61,6 @@ class MovieSearch: UIViewController{
     
     
     func fetchApiMovies(){
-        movies = [Movie]()
-        searchMovieCollection.reloadData()
         guard let url = api.urlSearchMovies(search: search.text!) else { return }
         api.fetch(url: url)
         {
@@ -73,6 +78,14 @@ class MovieSearch: UIViewController{
                 self.movies.append(contentsOf: data.results)
                 
                 self.searchMovieCollection.insertItems(at: indexPaths)
+                let imageBackgroundEmpty : UIImageView = {
+                    let iv = UIImageView()
+                    iv.image = UIImage(named:"")
+                    iv.contentMode = .scaleAspectFill
+                    return iv
+                }()
+                self.searchMovieCollection?.backgroundView = imageBackgroundEmpty
+                
             case .failure(let error):
                 print(error)
             }
@@ -119,6 +132,9 @@ extension MovieSearch: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.text = textField.text?.trim()
         if let text = textField.text, text.count >= 3 {
+            movies = [Movie]()
+            searchMovieCollection.reloadData()
+            api.currentPage = 1
             fetchApiMovies()
             search.resignFirstResponder()
             return true
@@ -130,7 +146,7 @@ extension MovieSearch: UITextFieldDelegate {
 
 fileprivate enum Constants {
     static let defaultSpacing = CGFloat(5)
-    static let spacingInsets = NSDirectionalEdgeInsets(top: defaultSpacing, leading: defaultSpacing, bottom: defaultSpacing, trailing: defaultSpacing)
+    static let spacingInsets = NSDirectionalEdgeInsets(top: defaultSpacing, leading: 15, bottom: defaultSpacing, trailing: defaultSpacing)
 }
 
 extension UICollectionViewCell {

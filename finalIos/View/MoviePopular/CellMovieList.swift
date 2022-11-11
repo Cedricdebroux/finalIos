@@ -28,11 +28,16 @@ class CellMovieList: UICollectionViewCell {
 
     
     func setupCell(model: Movie){
-        circleBackground.layer.cornerRadius = circleBackground.frame.size.height/2  
+        circleBackground.layer.cornerRadius = circleBackground.frame.size.height/2
+        circleBackground.layer.borderWidth = 5
+        circleBackground.layer.borderWidth = 2
+        circleBackground.layer.borderColor = UIColor.systemOrange.cgColor
         voteAverage.text = String(format: "%.01f", model.voteAverage)
         
         if let posterPath = model.posterPath, let urls = URL(string:(baseUrl+posterPath)){
             imageFilm.af.setImage(withURL: urls)
+            imageFilm.layer.cornerRadius = 20
+            
         }
     }
     

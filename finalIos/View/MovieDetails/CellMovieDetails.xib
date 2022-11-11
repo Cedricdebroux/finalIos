@@ -16,15 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="205" height="278"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-PJ-C2v">
-                        <rect key="frame" x="52.666666666666657" y="54" width="100" height="170"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDk-PJ-C2v">
+                        <rect key="frame" x="40" y="45.666666666666657" width="125" height="187"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="170" id="1PR-hk-CCG"/>
-                            <constraint firstAttribute="width" constant="100" id="gWQ-J4-bQq"/>
+                            <constraint firstAttribute="height" constant="187" id="1PR-hk-CCG"/>
+                            <constraint firstAttribute="width" constant="125" id="gWQ-J4-bQq"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre du film" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-jR-VnP">
-                        <rect key="frame" x="52.666666666666657" y="235.33333333333334" width="100" height="40.000000000000028"/>
+                        <rect key="frame" x="52.666666666666657" y="235.66666666666666" width="100" height="39.999999999999972"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="pJl-U2-Y5W"/>
                             <constraint firstAttribute="width" constant="100" id="rXk-dp-TCI"/>
@@ -40,7 +40,7 @@
                 <constraint firstItem="eCs-jR-VnP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5K7-gD-GY4"/>
                 <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="QN6-NM-pwT"/>
                 <constraint firstItem="uDk-PJ-C2v" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="esy-eU-ePo"/>
-                <constraint firstItem="eCs-jR-VnP" firstAttribute="top" secondItem="uDk-PJ-C2v" secondAttribute="bottom" constant="11.333333333333343" id="pjS-v7-cQT"/>
+                <constraint firstItem="eCs-jR-VnP" firstAttribute="top" secondItem="uDk-PJ-C2v" secondAttribute="bottom" constant="3" id="pjS-v7-cQT"/>
             </constraints>
             <size key="customSize" width="205" height="278"/>
             <connections>

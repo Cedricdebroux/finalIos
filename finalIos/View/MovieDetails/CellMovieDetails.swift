@@ -24,6 +24,8 @@ class CellMovieDetails: UICollectionViewCell {
         
         if let posterPath = model.posterPath, let url = URL(string: (baseUrl+posterPath)){
             imageFilm.af.setImage(withURL: url)
+            imageFilm.layer.cornerRadius = 30
+            
         }
     }
 }

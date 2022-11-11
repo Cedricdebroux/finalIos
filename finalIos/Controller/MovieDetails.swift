@@ -50,6 +50,12 @@ class MovieDetails: UIViewController {
 //        view.addSubview(circle)
         setupValue()
         circleBackground.layer.cornerRadius = circleBackground.frame.size.height/2
+        posterImage.layer.cornerRadius = 17
+        backgroundImage.layer.cornerRadius = 20
+        circleBackground.layer.borderWidth = 2
+        circleBackground.layer.borderColor = UIColor.systemOrange.cgColor
+        posterImage.layer.borderWidth = 6
+        posterImage.layer.borderColor = UIColor.white.cgColor
         
     }
     override func viewWillDisappear(_ animated: Bool) {
