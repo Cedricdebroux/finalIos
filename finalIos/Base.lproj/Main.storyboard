@@ -28,7 +28,6 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstItem="UHc-oF-fJa" firstAttribute="centerX" secondItem="6ib-xA-x9h" secondAttribute="centerX" id="1ku-ip-Ofu"/>
-                                    <constraint firstAttribute="trailing" secondItem="UHc-oF-fJa" secondAttribute="trailing" constant="15" id="BwL-Qr-N9A"/>
                                     <constraint firstItem="UHc-oF-fJa" firstAttribute="leading" secondItem="6ib-xA-x9h" secondAttribute="leading" constant="15" id="eCA-vm-dqE"/>
                                     <constraint firstItem="UHc-oF-fJa" firstAttribute="top" secondItem="6ib-xA-x9h" secondAttribute="top" constant="124" id="mGa-Wh-Jp7"/>
                                     <constraint firstAttribute="height" constant="175" id="tTX-le-7hw"/>
@@ -177,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIj-dk-VP2">
-                                <rect key="frame" x="27" y="378" width="75" height="21"/>
+                                <rect key="frame" x="27" y="378" width="216" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -230,7 +229,7 @@
                             <constraint firstItem="5kh-8t-nbg" firstAttribute="leading" secondItem="Lsb-Kf-xcJ" secondAttribute="leading" constant="30" id="Wv4-2v-N7B"/>
                             <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="CrG-Nl-aIR" secondAttribute="trailing" constant="10" id="XAC-di-psa"/>
                             <constraint firstItem="HvL-F8-Y5M" firstAttribute="leading" secondItem="Lsb-Kf-xcJ" secondAttribute="leading" id="hv1-CR-ksH"/>
-                            <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="gIj-dk-VP2" secondAttribute="trailing" constant="291" id="nrS-4R-DcR"/>
+                            <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="gIj-dk-VP2" secondAttribute="trailing" constant="150" id="nrS-4R-DcR"/>
                             <constraint firstItem="Lsb-Kf-xcJ" firstAttribute="trailing" secondItem="q5b-Ae-F14" secondAttribute="trailing" constant="30" id="otJ-xM-xy7"/>
                             <constraint firstItem="HvL-F8-Y5M" firstAttribute="centerX" secondItem="qLc-u2-2rm" secondAttribute="centerX" id="qSA-kp-hIm"/>
                             <constraint firstItem="5kh-8t-nbg" firstAttribute="top" secondItem="gIj-dk-VP2" secondAttribute="bottom" id="rcJ-Ul-8Za"/>
@@ -298,7 +297,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="STy-S8-UNk"/>
+        <segue reference="qQF-QR-gT1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

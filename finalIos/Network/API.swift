@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import Network
+import UIKit
 
 
 class Api {
@@ -38,7 +39,7 @@ class Api {
     
     
     
-//MARK: - Connection Network
+    //MARK: - Connection Network
     
     func isNetwork(connected: @escaping () -> Void, disconnected: @escaping () -> Void) {
         monitor.pathUpdateHandler = { path in
@@ -52,7 +53,7 @@ class Api {
         monitor.start(queue: .global())
     }
     
-   func urlTrending() -> URL?{
+    func urlTrending() -> URL?{
         urlComponents.path = "/3/trending/all/day"
         return urlComponents.url
         
@@ -60,7 +61,7 @@ class Api {
     
     func urlSearchMovies(search: String) -> URL?{
         urlComponents.path = "/3/search/movie"
-//        search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        //        search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         filterQuery()
         urlComponents.queryItems?.append(URLQueryItem(name: "query", value: "\(search)"))
         return urlComponents.url
@@ -70,7 +71,7 @@ class Api {
         urlComponents.path = "/3/movie/\(movie)/similar"
         return urlComponents.url
     }
-   
+    
     private func filterQuery(){
         if let items = urlComponents.queryItems{
             urlComponents.queryItems = items.filter{
@@ -85,8 +86,8 @@ extension Api {
     func fetch(url: URL, handler: @escaping (Result<MovieModel, AFError>) -> Void) {
         isNetwork(
             connected: {
-                    AF.request(url).responseDecodable(of: MovieModel.self) {
-                        handler($0.result)
+                AF.request(url).responseDecodable(of: MovieModel.self) {
+                    handler($0.result)
                 }
             }, disconnected: {
                 print("Not connected")

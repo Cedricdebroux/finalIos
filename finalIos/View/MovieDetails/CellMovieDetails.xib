@@ -20,6 +20,7 @@
                         <rect key="frame" x="42.666666666666657" y="10" width="120" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="1PR-hk-CCG"/>
+                            <constraint firstAttribute="width" secondItem="uDk-PJ-C2v" secondAttribute="height" multiplier="3:5" id="It2-dK-P7R"/>
                             <constraint firstAttribute="width" constant="120" id="gWQ-J4-bQq"/>
                         </constraints>
                     </imageView>

@@ -29,6 +29,10 @@ class MoviePopular: UIViewController {
         popularMovie.refreshControl = UIRefreshControl()
         popularMovie.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
         title = "Popular"
+        api.isNetwork(connected: {}, disconnected: {
+            self.alertInfoConnection()
+        })
+
     }
     override func viewWillDisappear(_ animated: Bool) {
         movies = [Movie]()

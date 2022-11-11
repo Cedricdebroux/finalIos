@@ -36,6 +36,10 @@ class MovieSearch: UIViewController{
             return iv
         }()
         self.searchMovieCollection?.backgroundView = imageBackground
+        
+        api.isNetwork(connected: {}, disconnected: {
+            self.alertInfoConnection()
+        })
     }
     override func viewWillAppear(_ animated: Bool) {
         api = Api()
@@ -57,9 +61,7 @@ class MovieSearch: UIViewController{
         }
         return layout
     }
-    
-    
-    
+
     func fetchApiMovies(){
         guard let url = api.urlSearchMovies(search: search.text!) else { return }
         api.fetch(url: url)
@@ -163,6 +165,14 @@ extension UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+    func alertInfoConnection(){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Attention", message: "Vous n'êtes pas connecté à internet", preferredStyle:
+            .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @objc func dismissKeyboard() {
